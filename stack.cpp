@@ -25,7 +25,7 @@ void stack::Push(int _iData) // insert at front
 	
 }
 
-bool stack::Pop(int _riData) // delete from front, pop a number of nodes from the stack
+bool stack::Pop(int& _riData) // delete from front, pop a number of nodes from the stack
 {
 	//check if it is empty before popping 
 	//if empty return false 
@@ -48,7 +48,7 @@ bool stack::Pop(int _riData) // delete from front, pop a number of nodes from th
 
 bool stack::Peek()
 {
-	std::cout << "Peek: " << head->getData() << std::endl;;
+	std::cout << "Stack Peek: " << head->getData() << std::endl;;
 	return false;
 }
 
@@ -67,6 +67,7 @@ bool stack::isEmpty()
 void stack::Display()
 {
 	temp = head;
+	std::cout << "Stack: ";
 	while (temp != NULL) {
 		std::cout << temp->getData() << "   ";
 		temp = temp->getNextNode();

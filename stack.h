@@ -12,7 +12,7 @@ public:
 	stack();
 	~stack();
 	void Push(int _iData);
-	bool Pop(int _riData);
+	bool Pop(int& _riData);
 	bool Peek();
 	bool isEmpty();
 	void Display();
